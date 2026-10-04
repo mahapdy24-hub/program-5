@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Sum of Natural Numbers</title>
+
+<script>
+
+function sum(n)
+{
+    var total = 0;
+
+    for(var i = 1; i <= n; i++)
+    {
+        total = total + i;
+    }
+
+    return total;
+}
+
+function calculate()
+{
+    var n = parseInt(
+        document.getElementById("n").value
+    );
+
+    document.getElementById("result").innerHTML =
+        "Sum = " + sum(n);
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>Sum of N Natural Numbers</h2>
+
+Enter N:
+
+<input type="text" id="n">
+
+<input type="button"
+       value="Find Sum"
+       onclick="calculate()">
+
+<p id="result"></p>
+
+</body>
+
+</html>
